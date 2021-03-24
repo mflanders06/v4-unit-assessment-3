@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
+import BookList from './components/BookList';
+import Shelf from './components/Shelf';
 
 
 class App extends Component{
@@ -15,9 +17,13 @@ class App extends Component{
   render(){
     return(
       <div>
-        <Header />
+        <header>
+          <Header />
+        </header>
+        <BookList />
+        <Shelf />
+        
       </div>
-      
     );
   }
 }
