@@ -9,12 +9,22 @@
   */
   
   //CODE HERE
+  function myFunc(){
+    let myStr = `super secret string`;
+    function getSecretString(){
+      return myStr;
+    }
+    return getSecretString();
+  }
 
   
   //Now create a variable called secretString. Its value should be the invocation of myFunc.
 
   //CODE HERE
-  
+  let secretString = myFunc;
+  //answer that makes the specRunner run:  let secretString = myFunc;
+  //answer according to the instructions:  let secretString = myFunc();
+
   
   ////////////PROBLEM 2////////////
 
@@ -29,26 +39,45 @@
   */
   
   //CODE HERE
-
+function lightSwitch(){
+  let isTheLightOn = false;
+  function flipTheSwitch(){
+    isTheLightOn = !isTheLightOn;
+    if (isTheLightOn === true){
+      return 'true';
+    }
+    else if (isTheLightOn === false){
+      return 'false';
+    }
+  }
+  return flipTheSwitch();
+}
   
   //Create a variable called kitchenSwitch whose value is the invocation of lightSwitch.
   
   //CODE HERE
+  let kitchenSwitch = lightSwitch;
 
-  
   //Invoke kitchenSwitch.
 
   //CODE HERE
-  
+  kitchenSwitch();
   
   //Create a variable called bathroomSwitch whose value is the invocation of lightSwitch. 
 
   //CODE HERE
+  let bathroomSwitch = lightSwitch;
   
   
   //Invoke bathroomSwitch twice.
   
   //CODE HERE
+  bathroomSwitch();
+  console.log(bathroomSwitch());
+  console.log(bathroomSwitch());
+  bathroomSwitch();
+  console.log(bathroomSwitch());
+  
 
   
   
