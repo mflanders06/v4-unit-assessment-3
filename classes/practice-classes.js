@@ -146,7 +146,7 @@ class Player extends Character{
 const aang = new Player('Aang', 'airbender', 100, 100);
 //const ozai = new Player('Ozai', 'firebender', 'Fire Nation', 'Do You Really Believe You Can Handle It All On Your Own', 100, 0);
 const ozai = new Player('Ozai', 'firebender', 100, 0);
-console.log(ozai.healthLevel);
+console.log(ozai);
 
 /*
     Let's see how a fight between these two would go. 
@@ -157,7 +157,7 @@ console.log(ozai.healthLevel);
 
 //CODE HERE
 
-let battle = ozai.defend(aang.attackStrength);
+let battle = ozai.defend(aang.attackLevel);
 //console.log(battle.message);
 
 //////////////////PROBLEM 4////////////////////
