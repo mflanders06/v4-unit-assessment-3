@@ -10,7 +10,7 @@
   
   //CODE HERE
   function myFunc(){
-    let myStr = `super secret string`;
+    const myStr = `super secret string`;
     function getSecretString(){
       return myStr;
     }
@@ -40,44 +40,50 @@
   
   //CODE HERE
 function lightSwitch(){
+
   let isTheLightOn = false;
+  
   function flipTheSwitch(){
     isTheLightOn = !isTheLightOn;
     if (isTheLightOn === true){
-      return 'true';
+      return 'The light is on';
     }
     else if (isTheLightOn === false){
-      return 'false';
+      return 'The light is off';
     }
   }
-  return flipTheSwitch();
+
+  return flipTheSwitch;
+
 }
   
   //Create a variable called kitchenSwitch whose value is the invocation of lightSwitch.
   
   //CODE HERE
-  let kitchenSwitch = lightSwitch;
+  let kitchenSwitch = lightSwitch();
 
   //Invoke kitchenSwitch.
 
   //CODE HERE
-  kitchenSwitch();
+kitchenSwitch();
   
   //Create a variable called bathroomSwitch whose value is the invocation of lightSwitch. 
 
   //CODE HERE
-  let bathroomSwitch = lightSwitch;
+  let bathroomSwitch = lightSwitch();
   
   
   //Invoke bathroomSwitch twice.
   
   //CODE HERE
   bathroomSwitch();
+  bathroomSwitch();
+  /*
   console.log(bathroomSwitch());
   console.log(bathroomSwitch());
   bathroomSwitch();
   console.log(bathroomSwitch());
-  
+  */
 
   
   
@@ -94,6 +100,38 @@ function lightSwitch(){
 
   //CODE HERE
 
+  function plantTracker(){
+    let plant = 'fern';
+    let height = 12;
+
+    function readInfo(){
+      return `This is a ${this.plant} plant that is ${this.height} inches tall.`
+    }
+
+    function waterPlant(){
+      return this.height++;
+    }
+
+    function prunePlant(){
+      return this.height--;
+    }
+
+    return {
+      readInfo: readInfo,
+      waterPlant: waterPlant,
+      prunePlant: prunePlant
+    }
+
+  }
+
+  /*
+  //Just testing (Yes, it does work perfectly).
+  let fiddleLeaf = plantTracker();
+  fiddleLeaf.plant = 'My cute fiddleleaf fern';
+  fiddleLeaf.height = 32;
+
+  console.log(fiddleLeaf.readInfo());
+  */
 
   ////////////PROBLEM 4////////////
 

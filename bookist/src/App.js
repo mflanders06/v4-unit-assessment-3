@@ -4,23 +4,25 @@ import './App.css';
 import Header from './components/Header';
 import BookList from './components/BookList';
 import Shelf from './components/Shelf';
+import data from './data';
 
 
 class App extends Component{
   constructor(){
     super();
     this.state = {
-
+      books: data
     }
   }
 
   render(){
+    //console.log(data);
     return(
       <div>
         <header>
           <Header />
         </header>
-        <BookList />
+        <BookList books = {this.state.books}/>
         <Shelf />
         
       </div>
