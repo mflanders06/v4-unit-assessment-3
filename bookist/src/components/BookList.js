@@ -13,7 +13,7 @@ class BookList extends Component{
             <div key={val.id}>
                 <h4 >{val.title}</h4>
                 <h4 >{val.author}</h4>
-                <img  src="{val.img}" alt="Cover"></img>
+                <img  src={val.img} alt="Cover"></img>
             </div>
         )
         )
