@@ -104,28 +104,28 @@ kitchenSwitch();
     let plant = 'fern';
     let height = 12;
 
-    function readInfo(){
-      return `This is a ${this.plant} plant that is ${this.height} inches tall.`
-    }
-
-    function waterPlant(){
-      return this.height++;
-    }
-
-    function prunePlant(){
-      return this.height--;
-    }
-
     return {
-      readInfo: readInfo,
-      waterPlant: waterPlant,
-      prunePlant: prunePlant
+
+    readInfo:function(){
+      return `This is a ${plant} plant that is ${height} inches tall.`
+    },
+
+    waterPlant:function(){
+      height++;
+      return height;
+    },
+
+    prunePlant:function(){
+      height--;
+      return height;
+    }
+
     }
 
   }
 
   /*
-  //Just testing (Yes, it does work perfectly).
+  //Just testing (Yes, it does work).
   let fiddleLeaf = plantTracker();
   fiddleLeaf.plant = 'My cute fiddleleaf fern';
   fiddleLeaf.height = 32;
@@ -146,6 +146,27 @@ kitchenSwitch();
   */
 
   //CODE HERE
+  function inventory(){
+    let products = [];
+
+    return {
+      readProducts: function(){
+        return products;
+      },
+
+      addToProducts: function(newProduct){
+        products =  [...products, newProduct]
+        return products;
+      },
+
+      deleteFromProducts: function(delProduct){
+        products.splice(products.indexOf(delProduct), 1);
+        return products;
+      }
+
+    }
+
+  }
 
 
   /*
@@ -153,6 +174,7 @@ kitchenSwitch();
   */
 
   //CODE HERE
+  const shoes = inventory();
 
 
   /*
@@ -160,4 +182,5 @@ kitchenSwitch();
   */
 
   //CODE HERE
+  shoes.addToProducts('Nike Air');
 
