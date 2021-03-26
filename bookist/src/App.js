@@ -11,9 +11,19 @@ class App extends Component{
   constructor(){
     super();
     this.state = {
-      books: data
+      books: data,
+      shelf: []
     }
+
+
+
   }
+
+  addToShelf(title){
+      this.setState({shelf: [...this.shelf, title]});
+  }
+
+
 
   render(){
     //console.log(data);
@@ -22,7 +32,9 @@ class App extends Component{
         <header>
           <Header />
         </header>
-        <BookList books = {this.state.books}/>
+        <div className="bookDisplay">
+          <BookList books = {this.state.books}/>
+        </div>
         <Shelf />
         
       </div>

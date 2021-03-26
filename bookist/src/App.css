@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.bookDisplay{
+  display: flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bookDiv{
+  height: 245px;
+  width: 120px;
+  margin: 15px;
+
+}
+
+.titleAuthor{
+  font-size: small;
+  text-align: center;
+}
+
+.bookCover{
+  height: 150px;
+  width: 120px;
+}
